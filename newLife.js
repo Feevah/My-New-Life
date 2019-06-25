@@ -6,7 +6,7 @@
     param integer returns a random number (between 1 and upper limit)
 */
 
-
+setTimeout(function(){
 
 
 function ask () {
@@ -58,7 +58,7 @@ function promptLife(alert) {
    var yourLife = buildFamily();
 alert("We think you would feel at home in with: \n" + 
     yourLife.kids + " kids\n" +
-    "with a new " + yourLife.married + "\n" +
+    "a new " + yourLife.married + "\n" +
     "living in " + yourLife.state + "\n" +
     "driving a " + yourLife.car + "\n" +
     "thinking about " + yourLife.hobby + "\n" +
@@ -66,3 +66,5 @@ alert("We think you would feel at home in with: \n" +
 }
 
 console.log (buildFamily());
+
+}, 500)
