@@ -5,8 +5,8 @@
 
 - [X] build/copy a random generator from axecopfire that I will use to loop through my own 
 - [X] Create objects that will hold data about each person's new life (i.e. city, job, lifestyle, income to shoot for)
-- [ ] Figure out how to log an object as a string in the alert box
-- [ ] Alert users name with newly generated data
+- [X] Figure out how to log an object as a string in the alert box
+- [X] Alert users name with newly generated data
 
 
 ![](view.jpg)
