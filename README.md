@@ -6,5 +6,7 @@
 - [ ] Create objects that will hold data about each person's new life (i.e. city, job, lifestyle, income to shoot for)
 - [ ] Alert users name with newly generated data
 
-![](view.jpeg)
+![](view.jpg)
+
+
 
