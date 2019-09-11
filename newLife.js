@@ -38,7 +38,7 @@ function randomGenerator(item) {
 
 function buildFamily () {
  var kids = [2, 6, 1, 0, 10]
- var married = ["husband", "wife"]
+ var married = ["many hot dates", "a steady relationship"]
  var state = ["Colorado", "South Carolina", "California", "Nevada", "New York", "Florida"]
  var car = ["Honda", "Jeep", "Chevy", "Mororcycle", "Ferrari", "Lamborghini", "Audi", "Ford"]
  var hobby = ["Golf", "Woodcarving", "Basketball", "MMA", "Weightlifting", "Building Boats"]
@@ -58,7 +58,7 @@ function promptLife(alert) {
    var yourLife = buildFamily();
 alert("We think you would feel at home in with: \n" + 
     yourLife.kids + " kids\n" +
-    "a new " + yourLife.married + "\n" +
+    "" + yourLife.married + "\n" +
     "living in " + yourLife.state + "\n" +
     "driving a " + yourLife.car + "\n" +
     "thinking about " + yourLife.hobby + "\n" +
