@@ -1,5 +1,15 @@
 body {
+	margin:auto;
 	text-align: center;
-	margin: auto;
+	padding: 20px;
 	align-content: center;
+	background-image: url("boat.jpg");
+	background-size: cover;
+	background-position: center;
+	font-family: 'East Sea Dokdo', cursive;
+	color: #272de3;
+	text-shadow: 2px 2px #fff;
+	font-size: 40px;
+	letter-spacing: 12.1px;
+	font-weight: 400;
 }
