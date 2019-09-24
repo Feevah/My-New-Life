@@ -6,16 +6,11 @@
     param integer returns a random number (between 1 and upper limit)
 */
 
-setTimeout(function(){
 
 
-function ask () {
-    var get = prompt ("Hey are you ready for a new life? Type yes or no");
-    if (get === "yes") {
-        promptLife(alert);}
-    else {alert ("ok, good luck to you!")}
-    }
-ask ();
+
+
+
 
 function randomGenerator(item) {
     if (!item) {
@@ -54,7 +49,7 @@ function buildFamily () {
 
   }
 }
-function promptLife(alert) {
+function promptLife() {
    var yourLife = buildFamily();
 alert("We think you would feel at home in with: \n" + 
     yourLife.kids + " kids\n" +
@@ -63,8 +58,13 @@ alert("We think you would feel at home in with: \n" +
     "driving a " + yourLife.car + "\n" +
     "thinking about " + yourLife.hobby + "\n" +
     "working as a " + yourLife.job)
+};
+
+function nono(){
+    alert ("Ok, we wish you the best!")
 }
 
-console.log (buildFamily());
 
-}, 500)
+
+document.querySelector('.yes').addEventListener('click', promptLife);
+document.querySelector('.no').addEventListener('click', nono);

@@ -13,5 +13,34 @@ body {
 	font-size: 40px;
 	letter-spacing: 12.1px;
 	font-weight: 400;
+	text-transform: uppercase;
 
+}
+.grid {
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+	/*margin: 50px auto;
+	padding-bottom: 50px;*/
+	
+}
+
+h4 {
+	letter-spacing: 0px;
+	color: black;
+}
+
+button {
+	font-family: 'East Sea Dokdo', cursive;
+	text-transform: uppercase;
+    font-size: 60px;
+    background: #272de3;
+    letter-spacing: 0.1em;
+    color:white;
+    padding:10px;
+    border-radius:20px;
+    border: none;
+    margin: 0 auto;
+    padding: 5px;
+    display: block;
+    width: 15%;
 }
