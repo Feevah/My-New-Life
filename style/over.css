@@ -3,13 +3,15 @@ body {
 	text-align: center;
 	padding: 20px;
 	align-content: center;
-	background-image: url("boat.jpg");
+	background-image: linear-gradient(rgba(165, 184, 73, 0.5), 
+		rgba(91, 163, 97, 0.5)), 
+	    url("../assets/trail.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center;
 	font-family: 'East Sea Dokdo', cursive;
-	color: #272de3;
-	text-shadow: 2px 2px #fff;
+	color: rgb(253, 255, 181);
+	text-shadow: 2px 2px #535428;
 	font-size: 40px;
 	letter-spacing: 12.1px;
 	font-weight: 400;
@@ -27,15 +29,25 @@ body {
 h4 {
 	letter-spacing: 0px;
 	color: black;
+	text-shadow: 2px 2px rgb(253, 255, 181);
+}
+
+.yes {
+	margin-right: 1em;
+}
+
+.no {
+	margin-left: 1em;
 }
 
 button {
+	cursor: pointer;
 	font-family: 'East Sea Dokdo', cursive;
 	text-transform: uppercase;
     font-size: 60px;
-    background: #272de3;
+    background: #535428;
     letter-spacing: 0.1em;
-    color:white;
+    color:rgb(253, 255, 181);
     padding:10px;
     border-radius:20px;
     border: none;
