@@ -33,7 +33,7 @@ function randomGenerator(item) {
 
 function buildFamily () {
  var kids = [2, 6, 1, 0, 10]
- var married = ["many hot dates", "a steady relationship"]
+ var married = ["with many hot dates", "in a steady relationship"]
  var state = ["Colorado", "South Carolina", "California", "Nevada", "New York", "Florida"]
  var car = ["Honda", "Jeep", "Chevy", "Mororcycle", "Ferrari", "Lamborghini", "Audi", "Ford"]
  var hobby = ["Golf", "Woodcarving", "Basketball", "MMA", "Weightlifting", "Building Boats"]
@@ -51,17 +51,17 @@ function buildFamily () {
 }
 function promptLife() {
    var yourLife = buildFamily();
-alert("We think you would feel at home in with: \n" + 
-    yourLife.kids + " kids\n" +
-    "" + yourLife.married + "\n" +
-    "living in " + yourLife.state + "\n" +
-    "driving a " + yourLife.car + "\n" +
-    "thinking about " + yourLife.hobby + "\n" +
-    "working as a " + yourLife.job)
+   document.querySelector("p").innerHTML = ("We think you would feel at home \n" 
+    + yourLife.married + ",\n"
+    + "with " + yourLife.kids + " kids,\n"
+    + "living in " + yourLife.state + ",\n"
+    + "driving a " + yourLife.car + ",\n"
+    + "thinking about " + yourLife.hobby + ",\n"
+    + "working as a " + yourLife.job)
 };
 
 function nono(){
-    alert ("Ok, we wish you the best!")
+  document.querySelector("p").innerHTML=("Ok, we wish you the best!")
 }
 
 
