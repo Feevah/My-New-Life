@@ -2,19 +2,33 @@
 <html>
 <head>
 	<title>Anew</title>
-	
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Map Example</title>
+    <script src="js/mapdata.js"></script>
+    <script src="js/usmap.js"></script>
+    <!-- <script src="select.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="style/over.css">
 	<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
 </head>
 <body>
 	<h4>A Random Object Generator to Help Create Games;<br>
 	Click Yes to randomly generate different options for a new life</h4>
-	<h1>Do you feel like you could use a fresh start?</h1>
+	<h3>Do you feel like you could use a fresh start?</h3>
+	<h4>Select a few of the states that you'd be <br>
+		interested in living in then click "yes" for our app <br>
+		to randomly select your new home as well as some other life changes.</h4>
+	<div class="grid">
+		<button class="yes" onmouseover="">Yes</button>
+		<button class="no" onmouseover="">No</button>
+	</div>
 	<p></p>
-<div class="grid">
-	<button class="yes" onmouseover="">Yes</button>
-	<button class="no" onmouseover="">No</button>
-</div>
+	<div class="map">
+		<!-- <h1>HTML5/JavaScript USA Map</h1> -->
+		<div id="map"></div>
+	</div>
+	
+
 
 <script type="text/javascript" src="js/newLife.js"></script>
 </body>
