@@ -19,7 +19,7 @@ body {
 	color: rgb(253, 255, 181);
 	text-shadow: 1px 1px #535428;
 	/* font-size: 40px; */
-	letter-spacing: 12.1px;
+	letter-spacing: 3px;
 	font-weight: 400;
 	text-transform: uppercase;
 	flex-direction: column;
@@ -34,7 +34,8 @@ body {
 	rgba(91, 163, 97, 0.5)),
 	url(../assets/sky.jpg);
 	background-size: cover;
-	background-position: center;
+    background-position: center;
+	letter-spacing: 12px;
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
 	position: relative;
