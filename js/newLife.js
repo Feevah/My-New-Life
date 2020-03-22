@@ -205,8 +205,8 @@ function nono(){
 
 
 
-document.querySelector('.yes').addEventListener('click', promptLife);
-document.querySelector('.no').addEventListener('click', nono);
+document.getElementById('yes').addEventListener('click', promptLife);
+document.getElementById('no').addEventListener('click', nono);
     
     });
     

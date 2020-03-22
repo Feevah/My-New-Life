@@ -3,33 +3,86 @@
 <head>
 	<title>Anew</title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Map Example</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <link rel="stylesheet" href="style/progress.css">
     <script src="js/mapdata.js"></script>
-    <script src="js/usmap.js"></script>
+	<script src="js/usmap.js"></script>
     <!-- <script src="select.js"></script> -->
 	<link rel="stylesheet" type="text/css" href="style/over.css">
 	<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h4>A Random Object Generator to Help Create Games;<br>
-	Click Yes to randomly generate different options for a new life</h4>
-	<h3>Do you feel like you could use a fresh start?</h3>
-	<h4>Select a few of the states that you'd be <br>
-		interested in living in then click "yes" for our app <br>
-		to randomly select your new home as well as some other life changes.</h4>
-	<div class="grid">
-		<button class="yes" onmouseover="">Yes</button>
-		<button class="no" onmouseover="">No</button>
-	</div>
-	<p></p>
-	<div class="map">
-		<!-- <h1>HTML5/JavaScript USA Map</h1> -->
-		<div id="map"></div>
-	</div>
+	<header class="header">
+		<div class="text-box">
+			<h1 class="heading-p">
+				<span class="heading-pmain">My New Life</span>
+				<span class="heading-smain">Take a Chance on Something New</span>
+				<!-- <a href="#" class="btn btn-white btn-animate">Try It</a> -->
+			</h1>
+		</div>	
+	</header>
 	
+	<section class="vids">
+		<h2>Imagine Moving A World Away</h2>
+		<h5>Custom video player built with JavaScript</h5>
+		<video 
+			src="videos/brazil_coast.mp4" 
+			class="screen" 
+			id="video" 
+			poster="image/01.png"
+		></video>
 
+		<div class="controls">
+			<button class="btn" id="play">
+				<i class="fa fa-play fa-2x"></i>
+			</button>
+			<button class="btn" id="stop">
+				<i class="fa fa-stop fa-2x"></i>
+			</button>
+			<input 
+				type="range" 
+				class="progress" 
+				id="progress" 
+				min="0" 
+				max="100" 
+				step="0.1" 
+				value="0"
+			/>
+			<span class="timestamp" id="timestamp">00:00</span>
+		</div>
+	</section>
 
-<script type="text/javascript" src="js/newLife.js"></script>
+	<section class="new-life">
+		<h3>Do you feel like you could use a fresh start?</h3>
+		<h5>Below You Will Find A Random Object Generator to Help Create Games;<br>
+			Click Yes to randomly generate different options for a new life.</h5>
+		<h4>Select a few of the states that you'd be<br>
+			interested in living in then click "yes"<br>
+			to randomly select your new home as well<br>as some other life changes.</h4>
+		<div class="grid">
+			<button class="yesNo" id="yes" onmouseover="">Yes</button>
+			<button class="yesNo" id="no" onmouseover="">No</button>
+		</div>
+		<p></p>
+		<div class="map">
+			<!-- <h1>HTML5/JavaScript USA Map</h1> -->
+			<div id="map"></div>
+		</div>
+</section>
+
+	<footer class="footer">
+		<div class="row">
+			<div class="footer__navigation">
+				<h4><a href="http://defeveloper.com">Contact Me</a></h4>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/script.js"></script>
+	
+	<script type="text/javascript" src="js/newLife.js"></script>
 </body>
 </html>

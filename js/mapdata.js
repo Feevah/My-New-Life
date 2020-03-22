@@ -4,13 +4,13 @@ var simplemaps_usmap_mapdata={
 		width: "responsive", //or 'responsive'
     background_color: "none",
     background_transparent: "yes",
-    border_color: "rgb(253, 255, 181)",
+    border_color: "#333",
     popups: "on_hover",
     
 		//State defaults
 		state_description: "",
     state_color: "#535428",
-    state_hover_color: "#3B729F",
+    state_hover_color: "rgba(165, 184, 73, 0.5)",
     state_url: "",
     border_size: 1.5,
     all_states_inactive: "no",
@@ -32,8 +32,8 @@ var simplemaps_usmap_mapdata={
     // all_locations_hidden: "no",
     
 		//Label defaults
-		label_color: "rgb(253, 255, 181)",
-    label_hover_color: "rgb(253, 255, 181)",
+		label_color: "#333",
+    label_hover_color: "#333",
     label_size: 22,
     label_font: "font-family: 'East Sea Dokdo', cursive;",
     hide_labels: "no",
