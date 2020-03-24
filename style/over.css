@@ -33,6 +33,7 @@ body {
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
 	position: relative;
+	border-bottom: 5px solid #333;
 }
 
 .heading-p {
