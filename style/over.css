@@ -30,8 +30,8 @@ body {
 	background-size: cover;
 	background-position: center;
 	letter-spacing: 12px;
-	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
-	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
+	/* -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 55vh);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 55vh); */
 	position: relative;
 	border-bottom: 5px solid #333;
 }
