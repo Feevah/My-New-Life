@@ -15,7 +15,25 @@
 	<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
 </head>
 <body>
+
+	<nav>
+        <div class="logo">
+            <img src="assets/sky.jpg" alt="">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Best Cities 2020</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+	</nav>
+		
 	<header class="header">
+
+		<button id="toggle" class="toggle">
+			<i class="fa fa-bars fa-3x"></i>
+	   </button>
+
 		<div class="text-box">
 			<h1 class="heading-p">
 				<span class="heading-pmain">My New Life</span>
@@ -23,7 +41,45 @@
 				<!-- <a href="#" class="btn btn-white btn-animate">Try It</a> -->
 			</h1>
 		</div>	
+
+		<button class="cta-button" id="open">More Information</button>
 	</header>
+
+
+	<!-- modal container  -->
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-button" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="modal-header">
+                Sign Up
+            </div>
+            <div class="modal-content">
+                <p>Enter your email for more tips on starting something new!</p>
+            
+                <form class="modal-form">
+                    <div>
+                        <label for="Name">Name</label>
+                        <input type="text" id="Name" placeholder="Enter Name" class="form-input">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email" class="form-input">
+                    </div>
+                    <!-- <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" class="form-input">
+                    </div>
+                    <div>
+                        <label for="password2">Confirm Password</label>
+                        <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                    </div> -->
+                    <input type="submit" value="Submit" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
 	
 	
 		<h2>Imagine Moving A World Away</h2>
@@ -69,7 +125,7 @@
 			<button class="yesNo" id="yes" onmouseover="">Yes</button>
 			<button class="yesNo" id="no" onmouseover="">No</button>
 		</div>
-		<p></p>
+		<p id="newLife"></p>
 		<div class="map">
 			<!-- <h1>HTML5/JavaScript USA Map</h1> -->
 			<div id="map"></div>
@@ -83,8 +139,8 @@
 			</div>
 		</div>
 	</footer>
-	
-	<script src="js/script.js"></script>
+	<script type="text/javascript" src="js/navModal.js"></script>
+	<script src="js/videoPlayer.js"></script>
 	<script type="text/javascript" src="js/newLife.js"></script>
 </body>
 </html>
