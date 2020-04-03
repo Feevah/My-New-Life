@@ -234,7 +234,7 @@
 			var kids = [ 2, 6, 1, 0, 3, 4 ];
 			var married = [ 'seeing different people', 'in a steady relationship' ];
 			var state = selected;
-			var car = [ 'Honda', 'Jeep', 'Chevy', 'Mororcycle', 'Ferrari', 'Lamborghini', 'Audi', 'Ford', 'VW Kombi' ];
+			var car = [ 'Honda', 'Jeep', 'Chevy', 'Mororcycle', 'Ferrari', 'Lamborghini', 'Dodge', 'Ford', 'VW Kombi' ];
 			var hobby = [
 				'Golf',
 				'Woodcarving',
@@ -269,16 +269,16 @@
 			document.querySelector('#newLife').innerHTML =
 				'We think you would feel at home... <br>' +
 				yourLife.married +
-				',\n' +
+				', ' +
 				'helping to raise ' +
 				yourLife.kids +
-				' kids,\n' +
+				' kids, ' +
 				'living in ' +
 				yourLife.state +
-				',\n' +
+				', ' +
 				'driving a ' +
 				yourLife.car +
-				',\n' +
+				', ' +
 				'thinking about ' +
 				yourLife.hobby +
 				' and ' +
