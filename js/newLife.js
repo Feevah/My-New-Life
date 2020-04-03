@@ -24,10 +24,7 @@
 			if (!readyFired) {
 				readyFired = true;
 				for (var i = 0; i < readyList.length; i++) {
-					readyList[i].fn.call(
-						window,
-						readyList[i].ctx
-					);
+					readyList[i].fn.call(window, readyList[i].ctx);
 				}
 				readyList = [];
 			}
@@ -45,33 +42,21 @@
 				return;
 			} else {
 				readyList.push({
-					fn  : callback,
-					ctx : context
+					fn: callback,
+					ctx: context
 				});
 			}
 			if (
 				document.readyState === 'complete' ||
-				(!document.attachEvent &&
-					document.readyState === 'interactive')
+				(!document.attachEvent && document.readyState === 'interactive')
 			) {
 				setTimeout(ready, 1);
 			} else if (!readyEventHandlersInstalled) {
 				if (document.addEventListener) {
-					document.addEventListener(
-						'DOMContentLoaded',
-						ready,
-						false
-					);
-					window.addEventListener(
-						'load',
-						ready,
-						false
-					);
+					document.addEventListener('DOMContentLoaded', ready, false);
+					window.addEventListener('load', ready, false);
 				} else {
-					document.attachEvent(
-						'onreadystatechange',
-						readyStateChange
-					);
+					document.attachEvent('onreadystatechange', readyStateChange);
 					window.attachEvent('onload', ready);
 				}
 				readyEventHandlersInstalled = true;
@@ -82,9 +67,9 @@
 
 	window[plugin] = (function() {
 		return {
-			map            : false,
-			on_shift       : false,
-			selected_color : false
+			map: false,
+			on_shift: false,
+			selected_color: false
 		};
 	})();
 
@@ -94,14 +79,10 @@
 		var me = window[plugin];
 		var map = me.map ? me.map : simplemaps_usmap; //usmap is default
 		var on_shift = me.on_shift;
-		var selected_color = me.selected_color
-			? me.selected_color
-			: map.mapdata.main_settings.state_hover_color;
+		var selected_color = me.selected_color ? me.selected_color : map.mapdata.main_settings.state_hover_color;
 		var selected = [];
 		var max = me.max ? me.max : false;
-		var original_mapdata = JSON.parse(
-			JSON.stringify(map.mapdata)
-		);
+		var original_mapdata = JSON.parse(JSON.stringify(map.mapdata));
 		var main_settings = map.mapdata.main_settings;
 
 		function check_mapdata(state) {
@@ -111,18 +92,9 @@
 			}
 			if (!original_mapdata.state_specific[state]) {
 				original_mapdata.state_specific[state] = {};
-				original_mapdata.state_specific[
-					state
-				].color =
-					'default';
-			} else if (
-				!original_mapdata.state_specific[state]
-					.color
-			) {
-				original_mapdata.state_specific[
-					state
-				].color =
-					'default';
+				original_mapdata.state_specific[state].color = 'default';
+			} else if (!original_mapdata.state_specific[state].color) {
+				original_mapdata.state_specific[state].color = 'default';
 			}
 		}
 
@@ -133,10 +105,7 @@
 				//deselect state
 				selected.splice(index, 1);
 				check_mapdata(state);
-				map.mapdata.state_specific[state].color =
-					original_mapdata.state_specific[
-						state
-					].color;
+				map.mapdata.state_specific[state].color = original_mapdata.state_specific[state].color;
 			}
 			done(state);
 		};
@@ -154,8 +123,7 @@
 				//make sure a state is selectedable
 				check_mapdata(state);
 				check_max();
-				map.mapdata.state_specific[state].color =
-					me.selected_color;
+				map.mapdata.state_specific[state].color = me.selected_color;
 				selected.push(state);
 				done(state);
 			}
@@ -220,17 +188,17 @@
 		window[plugin] = (function() {
 			return {
 				//inputs
-				map            : map,
-				on_shift       : on_shift,
-				selected_color : selected_color,
-				max            : max,
+				map: map,
+				on_shift: on_shift,
+				selected_color: selected_color,
+				max: max,
 				//outputs
-				selected       : selected,
+				selected: selected,
 				//methods
-				select         : select,
-				deselect       : deselect,
-				select_all     : select_all,
-				deselect_all   : deselect_all
+				select: select,
+				deselect: deselect,
+				select_all: select_all,
+				deselect_all: deselect_all
 			};
 		})();
 
@@ -259,29 +227,14 @@
 				return Math.ceil(Math.random() * item);
 			}
 
-			return item[
-				Math.floor(Math.random() * item.length)
-			];
+			return item[Math.floor(Math.random() * item.length)];
 		}
 
 		function buildFamily() {
 			var kids = [ 2, 6, 1, 0, 3, 4 ];
-			var married = [
-				'with many hot dates',
-				'in a steady relationship'
-			];
+			var married = [ 'seeing different people', 'in a steady relationship' ];
 			var state = selected;
-			var car = [
-				'Honda',
-				'Jeep',
-				'Chevy',
-				'Mororcycle',
-				'Ferrari',
-				'Lamborghini',
-				'Audi',
-				'Ford',
-				'VW Kombi'
-			];
+			var car = [ 'Honda', 'Jeep', 'Chevy', 'Mororcycle', 'Ferrari', 'Lamborghini', 'Audi', 'Ford', 'VW Kombi' ];
 			var hobby = [
 				'Golf',
 				'Woodcarving',
@@ -303,21 +256,21 @@
 			];
 
 			return {
-				kids    : randomGenerator(kids),
-				married : randomGenerator(married),
-				state   : randomGenerator(state),
-				car     : randomGenerator(car),
-				hobby   : randomGenerator(hobby),
-				job     : randomGenerator(job)
+				kids: randomGenerator(kids),
+				married: randomGenerator(married),
+				state: randomGenerator(state),
+				car: randomGenerator(car),
+				hobby: randomGenerator(hobby),
+				job: randomGenerator(job)
 			};
 		}
 		function promptLife() {
 			var yourLife = buildFamily();
 			document.querySelector('#newLife').innerHTML =
-				'We think you would feel at home \n' +
+				'We think you would feel at home... <br>' +
 				yourLife.married +
 				',\n' +
-				'with ' +
+				'helping to raise ' +
 				yourLife.kids +
 				' kids,\n' +
 				'living in ' +
@@ -328,22 +281,17 @@
 				',\n' +
 				'thinking about ' +
 				yourLife.hobby +
-				',\n' +
+				' and ' +
 				'working as a ' +
 				yourLife.job;
 		}
 
 		function nono() {
-			document.querySelector('#newLife').innerHTML =
-				'Ok, we wish you the best!';
+			document.querySelector('#newLife').innerHTML = 'Ok, we wish you the best!';
 		}
 
-		document
-			.getElementById('yes')
-			.addEventListener('click', promptLife);
-		document
-			.getElementById('no')
-			.addEventListener('click', nono);
+		document.getElementById('yes').addEventListener('click', promptLife);
+		document.getElementById('no').addEventListener('click', nono);
 	});
 })('simplemaps_select');
 
